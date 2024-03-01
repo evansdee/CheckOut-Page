@@ -1,13 +1,498 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-color: rgba(102, 102, 102, 0.3647058824);
+  margin: 0 auto;
 }
+
+.App {
+  position: relative;
+}
+.App nav {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: #fff;
+  justify-content: space-between;
+  padding: 1em 1.5em;
+  color: #28282b;
+  border-bottom: 1px solid rgba(40, 40, 43, 0.5215686275);
+}
+.App nav h1 {
+  text-transform: uppercase;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.App .summary {
+  background-color: #fff;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.App .summary header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 1.5em;
+  justify-content: space-between;
+}
+.App .summary header h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 0.9em;
+  cursor: pointer;
+  font-weight: 100;
+}
+.App .summary header p {
+  font-weight: bolder;
+}
+.App .summary main {
+  background-color: rgba(102, 102, 102, 0.1725490196);
+}
+.App .summary main .items {
+  padding: 1em 1.5em;
+}
+.App .summary main .items .item {
+  width: 100%;
+  margin: 1em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.App .summary main .items .item .img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: rgba(102, 102, 102, 0.1725490196);
+  width: 18%;
+  padding: 1.5em 1em;
+  position: relative;
+  border: 1px solid rgba(102, 102, 102, 0.3647058824);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.App .summary main .items .item .img img {
+  width: 100%;
+}
+.App .summary main .items .item .img p {
+  position: absolute;
+  color: #fff;
+  top: -10%;
+  font-size: 0.7em;
+  right: -10%;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  background-color: #3d3c3c;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+.App .summary main .items .item .txt {
+  width: 50%;
+  color: #28282b;
+  padding: 0 1em;
+}
+.App .summary main .items .item .txt h4 {
+  line-height: 1.2em;
+}
+.App .summary .discount {
+  width: 100%;
+  padding: 0 1.5em;
+}
+.App .summary .discount input {
+  border: 0.5px solid rgba(117, 114, 114, 0.4666666667);
+  width: 75%;
+  padding: 1.2em;
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+}
+.App .summary .discount input:focus {
+  outline: none;
+  border: 2.5px solid #28282b;
+}
+.App .summary .discount button {
+  cursor: pointer;
+  padding: 1.2em;
+  margin-left: 1em;
+  border-radius: 10px;
+  border: 0.5px solid rgba(117, 114, 114, 0.4666666667);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.App .summary .total {
+  margin: 1.5em 0 0;
+  padding: 1em 1.5em 1.5em;
+}
+.App .summary .total p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 0.5em 0;
+  justify-content: space-between;
+}
+.App .summary .total p span {
+  font-size: 0.9em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.App .summary .btn {
+  padding: 1.5em;
+}
+.App .summary .btn button {
+  font-size: 1.3em;
+  cursor: pointer;
+  background-color: #28282b;
+  border: none;
+  outline: none;
+  color: #fff;
+  border-radius: 50px;
+  width: 100%;
+  padding: 0.7em 0;
+}
+.App .contact {
+  padding: 1em 1.5em;
+  font-family: sans-serif;
+  background-color: #fff;
+}
+.App .contact .head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 0 1.5em;
+}
+.App .contact .head p {
+  font-size: 0.9em;
+  color: rgba(85, 82, 82, 0.7254901961);
+}
+.App .contact .head p span {
+  color: #28282b;
+  text-decoration: underline;
+}
+.App .contact .head h4 {
+  font-size: 1.5em;
+}
+.App .contact input[type=text] {
+  width: 100%;
+  padding: 0.8em 1em;
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+.App .contact input[type=text]:focus {
+  outline: none;
+  border: 2.5px solid #28282b;
+  transition: border 0.4s ease-in-out;
+  -webkit-transition: border 0.4s ease-in-out;
+  -moz-transition: border 0.4s ease-in-out;
+  -ms-transition: border 0.4s ease-in-out;
+  -o-transition: border 0.4s ease-in-out;
+}
+.App .contact input[type=checkbox] {
+  width: 1.3em;
+  height: 1.3em;
+  accent-color: #28282b;
+}
+.App .contact label {
+  margin-left: 0.5em;
+}
+.App .delivery-container,
+.App .billing {
+  font-family: sans-serif;
+  padding: 1.5em;
+  margin-top: 1em;
+  background-color: #fff;
+}
+.App .delivery-container .active,
+.App .billing .active {
+  border: 1.5px solid #28282b;
+}
+.App .delivery-container .notActive,
+.App .billing .notActive {
+  border: 1px solid #ddd;
+}
+.App .delivery-container .form,
+.App .billing .form {
+  margin: 1.5em 0 0;
+  font-family: sans-serif;
+}
+.App .delivery-container .form select,
+.App .billing .form select {
+  margin: 0.5em 0;
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid #ddd;
+  padding: 1em;
+  font-size: 1em;
+  border-radius: 5px;
+}
+.App .delivery-container .form select:focus,
+.App .billing .form select:focus {
+  border: 2px solid #28282b;
+}
+.App .delivery-container .form select option,
+.App .billing .form select option {
+  padding: 0 1em;
+}
+.App .delivery-container .form input[type=text],
+.App .billing .form input[type=text] {
+  width: 100%;
+  margin: 0.5em 0;
+  padding: 1em;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+}
+.App .delivery-container .form input[type=text]:focus,
+.App .billing .form input[type=text]:focus {
+  outline: none;
+  border: 2.5px solid #28282b;
+  transition: border 0.4s ease-in-out;
+  -webkit-transition: border 0.4s ease-in-out;
+  -moz-transition: border 0.4s ease-in-out;
+  -ms-transition: border 0.4s ease-in-out;
+  -o-transition: border 0.4s ease-in-out;
+}
+.App .delivery-container .form input[type=checkbox],
+.App .billing .form input[type=checkbox] {
+  width: 1.3em;
+  height: 1.3em;
+  accent-color: #28282b;
+  margin-right: 0.5em;
+}
+.App .delivery-container .form section,
+.App .billing .form section {
+  margin: 1.5em 0;
+}
+.App .delivery-container .form section p,
+.App .billing .form section p {
+  margin: 1em 0;
+  padding: 1em;
+  background-color: rgba(102, 102, 102, 0.0901960784);
+  color: #5c5b5b;
+}
+.App .delivery-container main,
+.App .billing main {
+  margin-top: 2em;
+}
+.App .delivery-container main h3,
+.App .billing main h3 {
+  margin-bottom: 1em;
+}
+.App .delivery-container main > p:nth-of-type(1),
+.App .billing main > p:nth-of-type(1) {
+  margin-bottom: 0.5em;
+}
+.App .delivery-container main .stock,
+.App .billing main .stock {
+  padding: 1em;
+  border: 1px solid #28282b;
+  background-color: rgba(102, 102, 102, 0.0901960784);
+  border-radius: 10px;
+}
+.App .delivery-container main .stock p:nth-of-type(1),
+.App .billing main .stock p:nth-of-type(1) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 0.4em;
+}
+.App .payment {
+  padding: 1em 1.5em;
+  font-family: sans-serif;
+  background-color: #fff;
+}
+.App .payment h3 {
+  font-size: 1.5em;
+}
+.App .payment p {
+  margin: 0.7em 0;
+}
+.App .payment .payment-option label {
+  cursor: pointer;
+}
+.App .payment .payment-option label:nth-of-type(1) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+  justify-content: space-between;
+  padding: 0.5em;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.App .payment .payment-option label:nth-of-type(1) input {
+  width: 10%;
+  accent-color: #28282b;
+}
+.App .payment .payment-option label:nth-of-type(1) > p {
+  width: 20%;
+}
+.App .payment .payment-option label:nth-of-type(1) .payment-icons {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.App .payment .payment-option label:nth-of-type(1) .payment-icons svg,
+.App .payment .payment-option label:nth-of-type(1) .payment-icons div {
+  margin: 0 0.5em;
+  font-size: 1.5em;
+}
+.App .payment .payment-option label:nth-of-type(1) .payment-icons div {
+  position: relative;
+  font-size: 1.1em;
+  width: 30px;
+  height: 24px;
+  background-color: rgb(248, 236, 236);
+  line-height: 24px;
+  text-align: center;
+}
+.App .payment .payment-option label:nth-of-type(1) section {
+  position: absolute;
+  right: 0;
+  top: -100%;
+  background-color: #28282b;
+  width: 35%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0.5em;
+  border-radius: 20px;
+}
+.App .payment .payment-option label:nth-of-type(1) section svg {
+  font-size: 1.5em;
+  margin: 0 0.3em;
+}
+.App .payment .payment-option .paystack-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.App .payment .payment-option .bank-body {
+  z-index: 2;
+}
+.App .payment .payment-option label:nth-of-type(2) {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  padding: 0.5em;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.App .payment .payment-option label:nth-of-type(2) input {
+  width: 10%;
+  accent-color: #28282b;
+}
+.App .payment .payment-option label:nth-of-type(2) p {
+  width: 90%;
+}
+
+.means {
+  margin-top: 1em;
+}
+.means label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 1em 1.5em;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.means label p input {
+  margin-right: 1em;
+  accent-color: #28282b;
+}
+.means label:nth-of-type(1) {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.means label:nth-of-type(2) {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+@media (min-width: 600px) {
+  body {
+    background-color: #fff;
+  }
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  form .delivery-container .form label.label-flex {
+    display: flex;
+    gap: 1em;
+  }
+}
+@media (min-width: 1000px) {
+  .out {
+    display: none;
+  }
+  form {
+    position: relative;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+  }
+  form section {
+    width: 45%;
+    padding-top: 1em;
+  }
+  form .summary.in {
+    padding-top: 1em;
+    width: 45%;
+    height: 100vh;
+    background-color: rgba(184, 183, 183, 0.3647058824);
+    position: sticky;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  form .summary.in header {
+    padding: 1em 1.5em;
+  }
+  form .summary.in main .items {
+    padding-top: 0;
+  }
+  form .summary.in .total {
+    margin: 0.5em 0 0;
+    padding-bottom: 0;
+  }
+}/*# sourceMappingURL=index.css.map */
