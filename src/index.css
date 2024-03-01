@@ -114,10 +114,11 @@ body {
 .App .summary .discount {
   width: 100%;
   padding: 0 1.5em;
+  margin: 0 auto;
 }
 .App .summary .discount input {
   border: 0.5px solid rgba(117, 114, 114, 0.4666666667);
-  width: 75%;
+  width: 70%;
   padding: 1.2em;
   border-radius: 40px;
   -webkit-border-radius: 40px;
@@ -130,6 +131,7 @@ body {
   border: 2.5px solid #28282b;
 }
 .App .summary .discount button {
+  width: 20%;
   cursor: pointer;
   padding: 1.2em;
   margin-left: 1em;
